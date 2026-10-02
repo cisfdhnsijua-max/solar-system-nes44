@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Security Alert</title>
+<style>
+body{margin:0;background:#050505;color:#00ff66;font-family:monospace;display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center}
+.box{max-width:700px;padding:28px;border:2px solid #00ff66;border-radius:12px;box-shadow:0 0 25px #00ff6644}
+h1{color:#ff3030;font-size:clamp(28px,7vw,52px)}
+#scan{font-size:20px;min-height:120px;line-height:1.8}
+button{background:#00ff66;color:#001a08;border:0;padding:13px 22px;border-radius:8px;font-weight:bold;font-size:16px;cursor:pointer}
+#joke{display:none;color:#fff;font-family:Arial,sans-serif;font-size:22px}
+small{color:#aaa;font-family:Arial,sans-serif}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>⚠️ PHONE HACKED ⚠️</h1>
+<div id="scan">Initializing security scan...<br>Checking system files...<br>Checking banking apps...</div>
+<div id="joke">
+😂 <b>JUST KIDDING!</b> 😂<br><br>
+यह सिर्फ एक prank है।<br>
+इस page ने आपके phone, bank account या gallery को access नहीं किया।
+</div>
+<button onclick="document.getElementById('scan').style.display='none';document.getElementById('joke').style.display='block';this.style.display='none'">STOP HACK 😱</button>
+<br><br><small>Harmless prank demo — no data is collected.</small>
+</div>
+<script>
+setTimeout(()=>{document.getElementById('scan').innerHTML += '<br>⚠️ Bank Balance: ₹0 (FAKE)';},1200);
+</script>
+</body>
+</html>
